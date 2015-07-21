@@ -61,10 +61,8 @@ class VK
     {
         $this->app_id = $app_id;
         $this->api_secret = $api_secret;
-        if (!is_null($access_token)) { $this->setAccessToken($access_token); }
-        
         $this->ch = curl_init();
-
+        if (!is_null($access_token)) { $this->setAccessToken($access_token); }
     }
 
     /**
