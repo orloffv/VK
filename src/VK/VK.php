@@ -94,11 +94,10 @@ class VK
      */
     public function setAccessToken($access_token)
     {
+        $this->access_token = $access_token;
         $this->auth = $this->checkAccessToken();
         if (!$this->auth) {
             throw new VKException('Invalid access token.');
-        } else {
-            $this->access_token = $access_token;
         }
     }
 
